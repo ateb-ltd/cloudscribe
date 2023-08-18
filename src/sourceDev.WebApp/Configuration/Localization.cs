@@ -1,4 +1,7 @@
-﻿using cloudscribe.Core.Web.Localization;
+﻿using Arebis.Core.AspNet.Mvc.Localization;
+using Arebis.Core.Localization;
+
+using cloudscribe.Core.Web.Localization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
@@ -15,10 +18,28 @@ namespace Microsoft.Extensions.DependencyInjection
             IConfiguration config
             )
         {
-            services.Configure<GlobalResourceOptions>(config.GetSection("GlobalResourceOptions"));
-            services.AddSingleton<IStringLocalizerFactory, GlobalResourceManagerStringLocalizerFactory>();
+            
+            // use this for localization via resx files in GlobalResources folder
+            // services.Configure<GlobalResourceOptions>(config.GetSection("GlobalResourceOptions"));
+            // services.AddSingleton<IStringLocalizerFactory, GlobalResourceManagerStringLocalizerFactory>();
+            // services.AddLocalization(options => options.ResourcesPath = "GlobalResources");
 
-            services.AddLocalization(options => options.ResourcesPath = "GlobalResources");
+
+            // use this for localization via database
+            services.AddLocalizationFromSource(config, options =>
+            {
+                options.Domains = new string[] { "cloudscribe" };
+                options.CacheFileName = "LocalizationCache.json";
+                options.UseOnlyReviewedLocalizationValues = false;
+                options.AllowLocalizeFormat = true;
+            });
+            services.AddModelBindingLocalizationFromSource();
+            services.AddControllers(config =>
+            {
+                config.Filters.Add<ModelStateLocalizationFilter>();
+            });
+            services.AddControllersWithViews().AddDataAnnotationsLocalizationFromSource();
+
 
             var supportedCultures = new[]
                 {

@@ -114,6 +114,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cloudscribe.QueryTool.Servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cloudscribe.QueryTool.Web", "src\cloudscribe.QueryTool.Web\cloudscribe.QueryTool.Web.csproj", "{BDADC452-F40A-44DF-A669-186D18DC0D7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloudscribe.Localization.Models", "src\cloudscribe.Localization.Models\cloudscribe.Localization.Models.csproj", "{B20DC921-E33B-4771-938A-8FAA5511F9E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloudscribe.Localization.Services", "src\cloudscribe.Localization.Services\cloudscribe.Localization.Services.csproj", "{E5A39EB4-D98F-414D-99F9-B658FF6F7D8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloudscribe.Localization.Web", "src\cloudscribe.Localization.Web\cloudscribe.Localization.Web.csproj", "{86F3FAC6-A75C-407D-8FBE-E77868170EA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloudscribe.Localization.EFCore.Common", "src\cloudscribe.Localization.EFCore.Common\cloudscribe.Localization.EFCore.Common.csproj", "{C74FA657-B5AB-41D7-B0EC-ABA52D33DD2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloudscribe.Localization.EFCore.MSSQL", "src\cloudscribe.Localization.EFCore.MSSQL\cloudscribe.Localization.EFCore.MSSQL.csproj", "{5AD5162D-B331-4710-8549-20E98CDB2FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloudscribe.Localization.EFCore.MySql", "src\cloudscribe.Localization.EFCore.MySql\cloudscribe.Localization.EFCore.MySql.csproj", "{7B7A58F2-2CF6-4E87-B882-C283F5153BBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloudscribe.Localization.EFCore.PostgreSql", "src\cloudscribe.Localization.EFCore.PostgreSql\cloudscribe.Localization.EFCore.PostgreSql.csproj", "{1B066478-BFBD-491E-9718-50256A746112}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloudscribe.Localization.EFCore.SQLite", "src\cloudscribe.Localization.EFCore.SQLite\cloudscribe.Localization.EFCore.SQLite.csproj", "{EE8784E9-30EA-43B4-82B1-9946FEE154FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -324,6 +340,38 @@ Global
 		{BDADC452-F40A-44DF-A669-186D18DC0D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDADC452-F40A-44DF-A669-186D18DC0D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDADC452-F40A-44DF-A669-186D18DC0D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B20DC921-E33B-4771-938A-8FAA5511F9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B20DC921-E33B-4771-938A-8FAA5511F9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B20DC921-E33B-4771-938A-8FAA5511F9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B20DC921-E33B-4771-938A-8FAA5511F9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5A39EB4-D98F-414D-99F9-B658FF6F7D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5A39EB4-D98F-414D-99F9-B658FF6F7D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5A39EB4-D98F-414D-99F9-B658FF6F7D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5A39EB4-D98F-414D-99F9-B658FF6F7D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F3FAC6-A75C-407D-8FBE-E77868170EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F3FAC6-A75C-407D-8FBE-E77868170EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F3FAC6-A75C-407D-8FBE-E77868170EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F3FAC6-A75C-407D-8FBE-E77868170EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74FA657-B5AB-41D7-B0EC-ABA52D33DD2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74FA657-B5AB-41D7-B0EC-ABA52D33DD2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74FA657-B5AB-41D7-B0EC-ABA52D33DD2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74FA657-B5AB-41D7-B0EC-ABA52D33DD2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD5162D-B331-4710-8549-20E98CDB2FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD5162D-B331-4710-8549-20E98CDB2FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD5162D-B331-4710-8549-20E98CDB2FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD5162D-B331-4710-8549-20E98CDB2FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B7A58F2-2CF6-4E87-B882-C283F5153BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B7A58F2-2CF6-4E87-B882-C283F5153BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B7A58F2-2CF6-4E87-B882-C283F5153BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B7A58F2-2CF6-4E87-B882-C283F5153BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B066478-BFBD-491E-9718-50256A746112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B066478-BFBD-491E-9718-50256A746112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B066478-BFBD-491E-9718-50256A746112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B066478-BFBD-491E-9718-50256A746112}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE8784E9-30EA-43B4-82B1-9946FEE154FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE8784E9-30EA-43B4-82B1-9946FEE154FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE8784E9-30EA-43B4-82B1-9946FEE154FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE8784E9-30EA-43B4-82B1-9946FEE154FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -380,6 +428,14 @@ Global
 		{F46AF3DE-5383-4BC8-9E90-884B6D369700} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
 		{DC124528-3BF5-4FF4-B60E-28D5DF872C74} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
 		{BDADC452-F40A-44DF-A669-186D18DC0D7A} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
+		{B20DC921-E33B-4771-938A-8FAA5511F9E3} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
+		{E5A39EB4-D98F-414D-99F9-B658FF6F7D8D} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
+		{86F3FAC6-A75C-407D-8FBE-E77868170EA2} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
+		{C74FA657-B5AB-41D7-B0EC-ABA52D33DD2F} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
+		{5AD5162D-B331-4710-8549-20E98CDB2FCE} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
+		{7B7A58F2-2CF6-4E87-B882-C283F5153BBB} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
+		{1B066478-BFBD-491E-9718-50256A746112} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
+		{EE8784E9-30EA-43B4-82B1-9946FEE154FD} = {9C16B47A-B712-4237-B62F-B4403ACF1CD5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3FDA23E8-B945-4001-92C5-F6A70186E3B0}

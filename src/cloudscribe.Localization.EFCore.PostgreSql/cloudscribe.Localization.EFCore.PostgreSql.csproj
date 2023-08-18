@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Version>6.0.0</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cloudscribe.EFCore.PostgreSql.Conventions\cloudscribe.EFCore.PostgreSql.Conventions.csproj" />
+    <ProjectReference Include="..\cloudscribe.Localization.EFCore.Common\cloudscribe.Localization.EFCore.Common.csproj" />
+  </ItemGroup>
+
+</Project>

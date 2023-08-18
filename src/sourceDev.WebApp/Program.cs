@@ -1,4 +1,5 @@
 ﻿using cloudscribe.QueryTool.EFCore.Common;
+using cloudscribe.Localization.EFCore.Common;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -144,6 +145,9 @@ namespace sourceDev.WebApp
 
                     // query tool
                     QueryToolStartup.InitializeDatabaseAsync(services).Wait();
+
+                    // database localization
+                    LocalizationStartup.InitializeDatabaseAsync(services).Wait();
 
 
                     //KvpEFCoreStartup.InitializeDatabaseAsync(services).Wait();

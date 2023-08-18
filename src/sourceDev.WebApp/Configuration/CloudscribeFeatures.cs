@@ -4,6 +4,11 @@ using cloudscribe.QueryTool.EFCore.MSSQL;
 using cloudscribe.QueryTool.EFCore.PostgreSql;
 using cloudscribe.QueryTool.EFCore.SQLite;
 using cloudscribe.QueryTool.EFCore.MySql;
+using cloudscribe.Localization.Services;
+using cloudscribe.Localization.EFCore.MSSQL;
+using cloudscribe.Localization.EFCore.PostgreSql;
+using cloudscribe.Localization.EFCore.SQLite;
+using cloudscribe.Localization.EFCore.MySql;
 //using cloudscribe.UserProperties.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -76,6 +81,12 @@ namespace Microsoft.Extensions.DependencyInjection
                                 maxConnectionRetryDelaySeconds: 30,
                                 commandTimeout: 30);
 
+                            services.AddLocalizationEFStorageSQLite(
+                                connectionString: slConnection,
+                                maxConnectionRetryCount: 0,
+                                maxConnectionRetryDelaySeconds: 30,
+                                commandTimeout: 30);
+
                             break;
 
                         case "pgsql-old":
@@ -98,6 +109,12 @@ namespace Microsoft.Extensions.DependencyInjection
                                maxConnectionRetryDelaySeconds: 30,
                                transientErrorCodesToAdd: null);
 
+                            services.AddLocalizationEFStoragePostgreSql(
+                               connectionString: pgsConnection,
+                               maxConnectionRetryCount: 0,
+                               maxConnectionRetryDelaySeconds: 30,
+                               transientErrorCodesToAdd: null);
+
                             break;
 
 
@@ -108,6 +125,12 @@ namespace Microsoft.Extensions.DependencyInjection
                            // services.AddCloudscribeKvpEFStorageMySql(mysqlConnection);
 
                            services.AddQueryToolEFStorageMySql(
+                               connectionString: mysqlConnection,
+                               maxConnectionRetryCount: 0,
+                               maxConnectionRetryDelaySeconds: 30,
+                               transientSqlErrorNumbersToAdd: null);
+
+                           services.AddLocalizationEFStorageMySql(
                                connectionString: mysqlConnection,
                                maxConnectionRetryCount: 0,
                                maxConnectionRetryDelaySeconds: 30,
@@ -131,6 +154,12 @@ namespace Microsoft.Extensions.DependencyInjection
                             //services.AddCloudscribeKvpEFStorageMSSQL(connectionString);
 
                             services.AddQueryToolEFStorageMSSQL(
+                                connectionString: connectionString,
+                                maxConnectionRetryCount: 0,
+                                maxConnectionRetryDelaySeconds: 30,
+                                transientSqlErrorNumbersToAdd: null);
+
+                            services.AddLocalizationEFStorageMSSQL(
                                 connectionString: connectionString,
                                 maxConnectionRetryCount: 0,
                                 maxConnectionRetryDelaySeconds: 30,

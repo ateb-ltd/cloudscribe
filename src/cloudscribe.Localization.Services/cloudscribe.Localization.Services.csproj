@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Version>6.0.0</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cloudscribe.Localization.EFCore.Common\cloudscribe.Localization.EFCore.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="Arebis.Core.AspNet.Mvc.Localization" Version="1.0.*" />
+    <PackageReference Include="Arebis.Core.Localization" Version="1.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.*" />
+    <PackageReference Include="Microsoft.IdentityModel" Version="6.0.*" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols" Version="6.0.*" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.0.*" />
+  
+  </ItemGroup>
+
+</Project>

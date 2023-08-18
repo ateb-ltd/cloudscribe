@@ -65,6 +65,14 @@
     <ProjectReference Include="..\cloudscribe.QueryTool.EFCore.SQLite\cloudscribe.QueryTool.EFCore.SQLite.csproj" />
     <ProjectReference Include="..\cloudscribe.QueryTool.Services\cloudscribe.QueryTool.Services.csproj" />
     <ProjectReference Include="..\cloudscribe.QueryTool.Web\cloudscribe.QueryTool.Web.csproj" />
+  
+    <ProjectReference Include="..\cloudscribe.Localization.EFCore.MSSQL\cloudscribe.Localization.EFCore.MSSQL.csproj" />
+    <ProjectReference Include="..\cloudscribe.Localization.EFCore.PostgreSql\cloudscribe.Localization.EFCore.PostgreSql.csproj" />
+    <ProjectReference Include="..\cloudscribe.Localization.EFCore.MySql\cloudscribe.Localization.EFCore.MySql.csproj" />
+    <ProjectReference Include="..\cloudscribe.Localization.EFCore.SQLite\cloudscribe.Localization.EFCore.SQLite.csproj" />
+    <ProjectReference Include="..\cloudscribe.Localization.Services\cloudscribe.Localization.Services.csproj" />
+    <ProjectReference Include="..\cloudscribe.Localization.Web\cloudscribe.Localization.Web.csproj" />
+
   </ItemGroup>
 
   <ItemGroup>
