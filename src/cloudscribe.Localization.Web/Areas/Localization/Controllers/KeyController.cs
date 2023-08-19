@@ -10,6 +10,7 @@ using System.Net.Mime;
 
 namespace cloudscribe.Localization.Web
 {
+    [Route("Localization/Key")]
     public class KeyController : BaseController
     {
         #region Construction

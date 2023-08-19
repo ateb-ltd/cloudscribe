@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace cloudscribe.Localization.Web
 {
+    [Route("Localization/Query")]
     public class QueryController : BaseController
     {
         #region Construction

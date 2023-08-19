@@ -24,23 +24,6 @@ namespace Microsoft.Extensions.DependencyInjection
             // services.AddSingleton<IStringLocalizerFactory, GlobalResourceManagerStringLocalizerFactory>();
             // services.AddLocalization(options => options.ResourcesPath = "GlobalResources");
 
-
-            // use this for localization via database
-            services.AddLocalizationFromSource(config, options =>
-            {
-                options.Domains = new string[] { "cloudscribe" };
-                options.CacheFileName = "LocalizationCache.json";
-                options.UseOnlyReviewedLocalizationValues = false;
-                options.AllowLocalizeFormat = true;
-            });
-            services.AddModelBindingLocalizationFromSource();
-            services.AddControllers(config =>
-            {
-                config.Filters.Add<ModelStateLocalizationFilter>();
-            });
-            services.AddControllersWithViews().AddDataAnnotationsLocalizationFromSource();
-
-
             var supportedCultures = new[]
                 {
                     new CultureInfo("en-US"),
@@ -56,8 +39,6 @@ namespace Microsoft.Extensions.DependencyInjection
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
-
-
                 // State what the default culture for your application is. This will be used if no specific culture
                 // can be determined for a given request.
                 options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");

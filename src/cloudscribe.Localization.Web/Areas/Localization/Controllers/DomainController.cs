@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace cloudscribe.Localization.Web
 {
+    [Route("Localization/Domain")]
     public class DomainController : BaseController
     {
         #region Construction

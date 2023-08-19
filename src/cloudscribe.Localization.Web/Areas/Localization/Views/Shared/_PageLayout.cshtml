@@ -91,7 +91,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sircl@2.2.7/sircl-toastr.js"></script>
     <script type="text/javascript">
 
-        var appId = "MvcDashboardLocalize";
+        var appId = "Localization";
 
         sircl.mainTargetSelector$ = "#body-content";
 
@@ -139,10 +139,10 @@
         <div class="container-fluid">
             <span>
                 <i class="whileloading-show fas fa-spinner fa-spin" style="color: limegreen; margin-right: 3px;"></i>
-                <a class="navbar-brand" asp-area="MvcDashboardLocalize" asp-controller="Home" asp-action="Index">
-                    <i class="whileloading-hide fas fa-tachometer-alt"></i>&nbsp;MvcDashboardLocalize
+                <a class="navbar-brand" asp-area="Localization" asp-controller="Home" asp-action="Index">
+                    <i class="whileloading-hide fas fa-tachometer-alt"></i>&nbsp;Localization
                 </a>
-                <span class="btn-group" role="group" onload-load="@Url.Action("MvcDashboardsDropdown", "Home")"></span>
+                @* <span class="btn-group" role="group" onload-load="@Url.Action("Localization", "Home")"></span> *@
             </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMainContent">
                 <span class="navbar-toggler-icon"></span>
@@ -150,16 +150,16 @@
             <div class="collapse navbar-collapse" id="navBarMainContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item" ifroute-setactive="\/Domain(\/|$)">
-                        <a class="nav-link" asp-area="MvcDashboardLocalize" asp-controller="Domain" asp-action="Index"><i class="fas fa-book"></i> Domains</a>
+                        <a class="nav-link" asp-area="Localization" asp-controller="Domain" asp-action="Index"><i class="fas fa-book"></i> Domains</a>
                     </li>
                     <li class="nav-item" ifroute-setactive="\/Key(\/|$)">
-                        <a class="nav-link" asp-area="MvcDashboardLocalize" asp-controller="Key" asp-action="Index"><i class="fa fa-tags"></i> Keys</a>
+                        <a class="nav-link" asp-area="Localization" asp-controller="Key" asp-action="Index"><i class="fa fa-tags"></i> Keys</a>
                     </li>
                     <li class="nav-item" ifroute-setactive="\/Query(\/|$)">
-                        <a class="nav-link" asp-area="MvcDashboardLocalize" asp-controller="Query" asp-action="Index"><i class="fas fa-database"></i> Queries</a>
+                        <a class="nav-link" asp-area="Localization" asp-controller="Query" asp-action="Index"><i class="fas fa-database"></i> Queries</a>
                     </li>
                 </ul>
-                <form class="d-flex" asp-area="MvcDashboardLocalize" asp-controller="Key" asp-action="Index" method="get">
+                <form class="d-flex" asp-area="Localization" asp-controller="Key" asp-action="Index" method="get">
                     <input class="form-control me-2 onfocus-select" type="search" placeholder="/ Search" aria-label="Search" name="Query">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                     <span onkeydown-click="/" onclick-focus="<FORM|>INPUT"></span>

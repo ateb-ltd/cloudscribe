@@ -3,15 +3,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace cloudscribe.Localization.Web
 {
-    [Area("MvcDashboardLocalize")]
-    [Authorize(Roles = "Administrator,LocalizeAdministrator")]
+    [Area("Localization")]
+    // [Route("localization/[controller]/[action]")]
+    // [Authorize(Roles = "Administrator")]
     public abstract class BaseController : Controller
     {
         [HttpGet]
-        public IActionResult MvcDashboardsDropdown()
+        public IActionResult Localization()
         {
             var model = new List<string>();
-            foreach (var type in this.GetType().Assembly.GetTypes().Where(t => t.Name == "BaseController" && (t.Namespace?.Contains(".Areas.MvcDashboard") ?? false)))
+            foreach (var type in this.GetType().Assembly.GetTypes().Where(t => t.Name == "BaseController" && (t.Namespace?.Contains(".Areas.Localization") ?? false)))
+            //foreach (var type in this.GetType().Assembly.GetTypes().Where(t => t.Name == "BaseController" ))
             {
                 var accessible = true;
                 var aatributes = type.GetCustomAttributes(typeof(AuthorizeAttribute), false);

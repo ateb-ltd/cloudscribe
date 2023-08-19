@@ -15,6 +15,15 @@ namespace Microsoft.AspNetCore.Builder
         {
             routes.AddCloudscribeFileManagerRoutes();
 
+            // routes.MapAreaControllerRoute(
+            //     name: "Localization",
+            //     areaName: "Localization",
+            //     pattern: "{Localization}/{controller=Home}/{action=Index}/{id?}");
+
+            routes.MapControllerRoute(
+                name: "area",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
             if (useFolders)
             {
                 routes.MapControllerRoute(
@@ -125,10 +134,10 @@ namespace Microsoft.AspNetCore.Builder
 
                 // https://stackoverflow.com/questions/45927545/asp-net-core-model-binding-error-messages-localization-in-asp-net-core-2-0
 
-                var F = services.BuildServiceProvider().GetService<IStringLocalizerFactory>();
-                var L = F.Create("ModelBindingMessages", null);
-                options.ModelBindingMessageProvider.SetAttemptedValueIsInvalidAccessor(
-                        (x, y) => L["The value supplied for {0} is invalid.", y]);
+                // var F = services.BuildServiceProvider().GetService<IStringLocalizerFactory>();
+                // var L = F.Create("ModelBindingMessages", null);
+                // options.ModelBindingMessageProvider.SetAttemptedValueIsInvalidAccessor(
+                //         (x, y) => L["The value supplied for {0} is invalid.", y]);
             })
                     .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                     .AddDataAnnotationsLocalization()
